@@ -3,20 +3,16 @@ kind: ContainerCluster
 metadata:
   annotations:
     cnrm.cloud.google.com/remove-default-node-pool: "true"
-  labels:
-    label-one: "value-one"
-  name: containercluster-sample
+  name: containernodepool-dep
 spec:
-  location: us-central1-a
+  location: us-east1-c
   initialNodeCount: 1
-  loggingService: logging.googleapis.com/kubernetes
-  monitoringService: monitoring.googleapis.com/kubernetes
   # masterAuth:
   #   username: "user"
   #   password:
   #     valueFrom:
   #       secretKeyRef:
-  #         name: containercluster-dep
+  #         name: containernodepool-dep
   #         key: password
   #   clientCertificateConfig:
   #     issueClientCertificate: false

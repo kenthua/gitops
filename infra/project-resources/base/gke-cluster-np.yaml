@@ -3,9 +3,9 @@ kind: ContainerNodePool
 metadata:
   labels:
     label-one: "value-one"
-  name: containernodepool
+  name: containernodepool-sample
 spec:
-  location: us-central1-a
+  location: us-east1-c
   autoscaling:
     minNodeCount: 1
     maxNodeCount: 3
@@ -20,10 +20,13 @@ spec:
     oauthScopes:
       - "https://www.googleapis.com/auth/logging.write"
       - "https://www.googleapis.com/auth/monitoring"
+    guestAccelerator:
+      - type: "nvidia-tesla-k80"
+        count: 1
     metadata:
       disable-legacy-endpoints: "true"
   management:
     autoRepair: true
     autoUpgrade: true
   clusterRef:
-    name: containercluster-sample
+    name: containernodepool-dep
