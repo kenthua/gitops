@@ -5,3 +5,4 @@ resources:
 - gke-cluster.yaml
 - gke-cluster-np.yaml
 - configconnector.yaml
+- configconnector-context.yaml

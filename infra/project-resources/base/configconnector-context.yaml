@@ -1,0 +1,10 @@
+# configconnectorcontext.yaml
+apiVersion: core.cnrm.cloud.google.com/v1beta1
+kind: ConfigConnectorContext
+metadata:
+  # you can only have one ConfigConnectorContext per Namespace
+  name: configconnectorcontext.core.cnrm.cloud.google.com
+  namespace: project-resources
+spec:
+  # The Google Service Account used to authenticate Google Cloud APIs in this Namespace
+  googleServiceAccount: "cnrm-system@kenthua-test-standalone.iam.gserviceaccount.com"
