@@ -6,7 +6,7 @@ spec:
   project: infra
   source:
     repoURL: 'https://github.com/kenthua/gitops'
-    path: cc/clusters
+    path: infra/project-resources/base
     targetRevision: main
   destination:
     server: 'https://kubernetes.default.svc'
