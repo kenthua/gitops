@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: config-connector
+spec:
+  project: infra
+  source:
+    repoURL: 'https://github.com/kenthua/gitops'
+    path: cc/clusters
+    targetRevision: main
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: project-resources
+  ignoreDifferences:
+  - kind: Namespace
+    version: v1
+    jsonPointers:
+    - /metadata/annotations
+    - /metadata/labels
+  syncPolicy:
+    automated:
+      selfHeal: true
