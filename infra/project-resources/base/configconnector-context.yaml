@@ -7,4 +7,4 @@ metadata:
   namespace: project-resources
 spec:
   # The Google Service Account used to authenticate Google Cloud APIs in this Namespace
-  googleServiceAccount: "cnrm-system@kenthua-test-standalone.iam.gserviceaccount.com"
+  googleServiceAccount: "cc-cnrm-system@kenthua-test-standalone.iam.gserviceaccount.com"
