@@ -10,4 +10,4 @@ spec:
   nodeConfig:
     machineType: e2-standard-2
   clusterRef:
-    name: containernodepool-dep
+    external: containernodepool-dep
