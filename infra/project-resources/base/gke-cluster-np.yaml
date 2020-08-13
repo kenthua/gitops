@@ -3,11 +3,8 @@ kind: ContainerNodePool
 metadata:
   name: my-node-pool-1
 spec:
-  location: us-east1-c
-  autoscaling:
-    minNodeCount: 1
-    maxNodeCount: 3  
+  location: us-west1-a
   nodeConfig:
-    machineType: e2-standard-2
+    machineType: n1-standard-1
   clusterRef:
-    external: containernodepool-dep
+    name: my-cluster
